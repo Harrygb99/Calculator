@@ -184,11 +184,13 @@
       <h2>Produtos</h2>
       <table>
         <tr><th>Produto</th><th>Preço</th><th>Quantidade</th></tr>
+
 <tr>
   <td>PÉ DE CABRA</td>
   <td id="price_PE_DE_CABRA">R$ 5.000,00</td>
-  <td><input type="number" name="PÉ DE CABRA" min="0" value="0"></td>
+  <td><input type="number" name="PE_DE_CABRA" min="0" value="0"></td>
 </tr>
+
 
 <tr>
   <td>PAGER</td>
