@@ -184,8 +184,18 @@
       <h2>Produtos</h2>
       <table>
         <tr><th>Produto</th><th>Preço</th><th>Quantidade</th></tr>
-        <tr><td>PÉ DE CABRA</td><td id="price_PÉ DE CABRA">R$ 5.000,00</td><td><input type="number" name="PÉ DE CABRA" min="0" value="0"></td></tr>
-        <tr><td>PAGER</td><td id="price_Pager">R$ 4.500,00</td><td><input type="number" name="PAGER" min="0" value="0"></td></tr>
+<tr>
+  <td>PÉ DE CABRA</td>
+  <td id="price_PE_DE_CABRA">R$ 5.000,00</td>
+  <td><input type="number" name="PÉ DE CABRA" min="0" value="0"></td>
+</tr>
+
+<tr>
+  <td>PAGER</td>
+  <td id="price_PAGER">R$ 4.500,00</td>
+  <td><input type="number" name="PAGER" min="0" value="0"></td>
+</tr>
+
       </table>
 
       <h2>Itens da Casa</h2>
@@ -204,16 +214,17 @@
   </div>
 
   <script>
-    const prices = {
-      semParceria: {
-        PÉ DE CABRA: 5000,
-        PAGER: 4500,
-      },
-      comParceria: {
-        PÉ DE CABRA: 4000,
-        PAGER: 4000,
-      }
-    };
+const prices = {
+  semParceria: {
+    PE_DE_CABRA: 5000,
+    PAGER: 4500,
+  },
+  comParceria: {
+    PE_DE_CABRA: 4000,
+    PAGER: 4000,
+  }
+};
+
 
     const casaPrices = {
       OURO: 25000,
