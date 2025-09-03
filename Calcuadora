@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -184,26 +183,14 @@
       <h2>Produtos</h2>
       <table>
         <tr><th>Produto</th><th>Preço</th><th>Quantidade</th></tr>
-
-<tr>
-  <td>PÉ DE CABRA</td>
-  <td id="price_PE_DE_CABRA">R$ 5.000,00</td>
-  <td><input type="number" name="PE_DE_CABRA" min="0" value="0"></td>
-</tr>
-
-
-<tr>
-  <td>PAGER</td>
-  <td id="price_PAGER">R$ 4.500,00</td>
-  <td><input type="number" name="PAGER" min="0" value="0"></td>
-</tr>
-
+        <tr><td>PÉ DE CABRA</td><td id="price_PE_DE_CABRA">R$ 5.000,00</td><td><input type="number" name="PE_DE_CABRA" min="0" value="0"></td></tr>
+        <tr><td>PAGER</td><td id="price_PAGER">R$ 4.500,00</td><td><input type="number" name="PAGER" min="0" value="0"></td></tr>
       </table>
 
       <h2>Itens da Casa</h2>
       <table>
         <tr><th>Item</th><th>Preço</th><th>Quantidade</th></tr>
-        <tr><td>OURO</td><td>R$ 25.000,00</td><td><input type="number" name="OURO" min="0" value="0"></td></tr>
+        <tr><td>OURO</td><td id="price_OURO">R$ 25.000,00</td><td><input type="number" name="OURO" min="0" value="0"></td></tr>
       </table>
 
       <div class="button-group">
@@ -216,17 +203,16 @@
   </div>
 
   <script>
-const prices = {
-  semParceria: {
-    PE_DE_CABRA: 5000,
-    PAGER: 4500,
-  },
-  comParceria: {
-    PE_DE_CABRA: 4000,
-    PAGER: 4000,
-  }
-};
-
+    const prices = {
+      semParceria: {
+        PE_DE_CABRA: 5000,
+        PAGER: 4500,
+      },
+      comParceria: {
+        PE_DE_CABRA: 4000,
+        PAGER: 4000,
+      }
+    };
 
     const casaPrices = {
       OURO: 25000,
@@ -242,6 +228,11 @@ const prices = {
 
       for (const item in currentPrices) {
         document.getElementById(`price_${item}`).innerText = formatCurrency(currentPrices[item]);
+      }
+
+      // Atualizar preço da casa também
+      for (const item in casaPrices) {
+        document.getElementById(`price_${item}`).innerText = formatCurrency(casaPrices[item]);
       }
     }
 
@@ -299,4 +290,3 @@ const prices = {
   </script>
 </body>
 </html>
-    
